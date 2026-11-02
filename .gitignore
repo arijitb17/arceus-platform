@@ -1,24 +1,30 @@
-
+# Build output
 target/
 **/target/
-
 build/
 **/build/
 
+# Logs
 logs/
 *.log
 
+# Env / secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.jks
+application-local.yml
+application-local.properties
 
+# IDE
 .idea/
 *.iml
 *.iws
 *.ipr
-
 .vscode/
-
 .project
 .classpath
 .settings/
@@ -27,25 +33,42 @@ logs/
 .apt_generated
 .factorypath
 
-nbproject/
-nbbuild/
-nbdist/
-.nb-gradle/
+# Maven
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
 
+# Java
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+
+# Node (if you have a frontend)
 node_modules/
 .next/
 out/
 
-.DS_Store
-Thumbs.db
+# Docker / local data
+docker-compose.override.yml
 
+# Archives
 *.zip
 *.tar
 *.gz
 *.rar
 *.7z
 
+# OS / editor temp
+.DS_Store
+Thumbs.db
+desktop.ini
 *.swp
 *.swo
+*.bak
+*.tmp
 
+# Test coverage
 coverage/
